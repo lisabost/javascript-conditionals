@@ -30,10 +30,11 @@ $(document).ready(function () {
 	    event.preventDefault();
         // Get the user's birth year from the text
         // box with ID of "birthYear"
-        var birthYear = $("#birthYear").val();
+        var birthYear = parseInt($("#birthYear").val());
+        var age = 2020 - birthYear;
         // If they are currently under 18, print "Child"
         // to the <p> with ID of "birthYearOutput"
-        if (birthYear < 18) {
+        if (age < 18) {
             $("#birthYearOutput").text("Child");
         } else {
         // If they are 18 or over, print "Adult" instead
