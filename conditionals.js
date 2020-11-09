@@ -100,37 +100,36 @@ $(document).ready(function () {
 
         // Create the description of the card, for example
         // "King of Spades" or "2 of Hearts"
-        var faceDescription = "";
-        var suitDescription = "";
+        var description = "";
 
         // For face values 2 - 10, you can just print the number
         // Face value 1 is "Ace", 11 is "Jack", 12 is "Queen",
         // and 13 is "King"
         if(faceValue === 11) {
-            faceDescription += "Jack";
+            description += "Jack";
         } else if(faceValue === 12) {
-            faceDescription += "Queen";
+            description += "Queen";
         } else if(faceValue === 13) {
-            faceDescription += "King"
+            description += "King"
         } else if(faceValue === 1) {
-            faceDescription += "Ace";
+            description += "Ace";
         } else {
-            faceDescription += faceValue;
+            description += faceValue;
         }
         // For the suits, 1 is "Clubs", 2 is "Spades",
         // 3 is "Hearts", 4 is "Diamonds"
         if(suit === 1) {
-            suitDescription += " of Clubs";
+            description += " of Clubs";
         } else if(suit === 2) {
-            suitDescription += " of Spades";
+            description += " of Spades";
         } else if(suit === 3) {
-            suitDescription += " of Hearts";
+            description += " of Hearts";
         } else {
-            suitDescription += " of Clubs";
+            description += " of Clubs";
         }
         // Print the card's description to the <p> with
         // ID of "drawCardOutput"
-        $("#drawCardOutput").text(faceDescription + suitDescription);
+        $("#drawCardOutput").text(description);
 
     }
 
