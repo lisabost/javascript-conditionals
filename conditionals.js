@@ -79,9 +79,9 @@ $(document).ready(function () {
         // get "adult chow", and over 10 get "senior chow"
         if(cat < 2) {
             $("#catAgeOutput").text("kitten chow");
-        } else if(cat >= 2 && cat <= 10) {
+        } else if(cat <= 10) {
                 $("#catAgeOutput").text("adult chow");
-        } else {
+        } else if(cat > 10) {
             $("#catAgeOutput").text("senior chow");
         }
         // Print the food recommendation to the <p> with
